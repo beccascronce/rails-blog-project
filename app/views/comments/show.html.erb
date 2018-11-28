@@ -1,5 +1,17 @@
 <p id="notice"><%= notice %></p>
 
+
+
+<h1>
+	<%= @post.title %>
+</h1>
+
+<%= @post.author %> posted <%= time_ago_in_words(@post.created_at) %> ago
+
+<p>
+<%= @comment.created_at.strftime("Posted on %m/%d/%y") %>
+</p>
+
 <p>
   <strong>Author:</strong>
   <%= @comment.author %>

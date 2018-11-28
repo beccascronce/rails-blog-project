@@ -5,6 +5,12 @@
   <%= @post.title %>
 </p>
 
+<%= @post.author %> posted <%= time_ago_in_words(@post.created_at) %> ago
+
+<p>
+<%= @post.created_at.strftime("Posted on %m/%d/%y") %>
+</p>
+
 <p>
   <strong>Author:</strong>
   <%= @post.author %>
